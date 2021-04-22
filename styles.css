@@ -8,6 +8,7 @@ p {
     font-family: monospace;
     font-size: large;
     margin-left: 6vw;
+    margin-bottom: 2vw;
 }
 .button {
     border: none;
