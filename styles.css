@@ -63,3 +63,10 @@ a:hover {
   text-decoration: none;
   color: #535353;
 }
+
+a:visited {
+  font-family: monospace;
+  font-size: large;
+  text-decoration: none;
+  color:#9b9a9a;
+}
