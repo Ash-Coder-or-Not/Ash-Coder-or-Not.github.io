@@ -46,3 +46,20 @@ p {
     background-color: #008CBA;
     color: white;
   }
+  
+ul.no-bullets {
+  list-style-type: none;
+}
+
+a:link {
+  font-family: monospace;
+  font-size: large;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  font-family: monospace;
+  text-decoration: none;
+  color: #535353;
+}
