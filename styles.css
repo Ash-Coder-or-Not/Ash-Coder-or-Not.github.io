@@ -46,15 +46,16 @@ p {
     background-color: #008CBA;
     color: white;
   }
-  
-ul.no-bullets-month {
+
+ul {
   list-style-type: none;
+}
+.no-bullets-month {
   padding-left: 10vw;
   padding-top: 6vw;
 }
 
-ul.no-bullets-entries {
-  list-style-type: none;
+.no-bullets-entries {
   padding-left: 1vw;
   padding-top: 2vw;
 }
