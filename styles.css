@@ -47,10 +47,16 @@ p {
     color: white;
   }
   
-ul.no-bullets {
+ul.no-bullets-month {
   list-style-type: none;
   padding-left: 10vw;
   padding-top: 6vw;
+}
+
+ul.no-bullets-entries {
+  list-style-type: none;
+  padding-left: 1vw;
+  padding-top: 2vw;
 }
 
 a:link {
@@ -71,4 +77,11 @@ a:visited {
   font-size: large;
   text-decoration: none;
   color:#9b9a9a;
+}
+
+li.month {
+  font-family: monospace;
+  font-size: large;
+  text-decoration: none;
+  color: black
 }
