@@ -1,45 +1,45 @@
 .h1 {
     font-family: 'Segoe UI';
     font-weight: 350;
-    font-size: 64px;
-    margin-left: 20px;
+    font-size: 6vw;
+    margin-left: 20vw;
 }
 p {
     font-family: monospace;
     font-size: large;
-    margin-left: 60px;
+    margin-left: 6vw;
 }
 .button {
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 1vw 2vw;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 2vw;
+    margin: 1vw 05vw;
     transition-duration: 0.4s;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: .5vw;
   }
   
   .button1 {
     background-color: white; 
     color: black; 
-    border: 2px solid #535353;
+    border: 0.25vw solid #535353;
     
   }
   
   .button1:hover {
     background-color: #535353;
     color: white;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 1vw 2vw 0 rgba(0,0,0,0.24), 0 17vw 50vw 0 rgba(0,0,0,0.19);
   }
   
   .button2 {
     background-color: white; 
     color: black; 
-    border: 2px solid #008CBA;
+    border: 2vw solid #008CBA;
   }
   
   .button2:hover {
@@ -49,6 +49,8 @@ p {
   
 ul.no-bullets {
   list-style-type: none;
+  padding-left: 10vw;
+  padding-top: 6vw;
 }
 
 a:link {
