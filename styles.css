@@ -51,6 +51,9 @@ p {
 
 ul {
   list-style-type: none;
+  font-family: monospace;
+  font-size: large;
+  
 }
 .no-bullets-month {
   padding-left: 10vw;
