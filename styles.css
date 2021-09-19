@@ -3,8 +3,10 @@
     src: url(selawksl.ttf);
 }
 
+
+
 html {
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: ;
 }
 
 ::-webkit-scrollbar {
@@ -113,10 +115,13 @@ h4 {
 
 p {
     font-family: monospace;
-    font-size: large;
+    font-size: 16px;
     margin-left: 6vw;
     margin-bottom: 2vw;
     margin-right: 2vw;
+    max-width: 1600px;
+    font-weight: 300;
+    line-height: 24px;
 }
 
 blockquote {
