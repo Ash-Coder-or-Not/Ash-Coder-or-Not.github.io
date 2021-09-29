@@ -3,7 +3,10 @@
     src: url(selawksl.ttf);
 }
 
-
+@font-face {
+    font-family: cascadia;
+    src: url(CascadiaMono.ttf);
+}
 
 html {
     -webkit-font-smoothing: ;
@@ -114,19 +117,20 @@ h4 {
 }
 
 p {
-    font-family: monospace;
+    font-family: cascadia, monospace;
     font-size: 16px;
     margin-left: 6vw;
     margin-bottom: 2vw;
     margin-right: 2vw;
     max-width: 1600px;
-    font-weight: 300;
+    font-weight: 350;
     line-height: 24px;
 }
 
 blockquote {
-    font-family: monospace;
+    font-family: cascadia, monospace;
     font-size: large;
+    font-weight: 350;
     margin-left: 8vw;
     margin-bottom: 2vw;
     margin-right: 2vw;
@@ -181,7 +185,8 @@ blockquote {
 
 ul {
   list-style-type: none;
-  font-family: monospace;
+  font-family: cascadia, monospace;
+  font-weight: 300;
   font-size: large;
   padding: auto;
   
@@ -222,7 +227,7 @@ a:visited {
 }
 
 li.month {
-  font-family: monospace;
+  font-family: cascadia, monospace;
   font-size: large;
   text-decoration: none;
 }
