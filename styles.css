@@ -81,7 +81,7 @@ body {
 h1 {
     font-family: 'Segoe UI', selawksl, sans-serif;
     font-weight: 200;
-    font-size: 6vw;
+    font-size: 4em;
     margin-left: 20vw;
     margin-right: 20vw;
 }
@@ -89,7 +89,7 @@ h1 {
 h2 {
     font-family: 'Segoe UI', selawksl, sans-serif;
     font-weight: 200;
-    font-size: 4vw;
+    font-size: 3em;
     margin-left: 20vw;
     margin-right: 20vw;
 }
@@ -97,7 +97,7 @@ h2 {
 h3 {
     font-family: 'Segoe UI', selawksl, sans-serif;
     font-weight: 200;
-    font-size: 3.75vw;
+    font-size: 2.5em;
     margin-left: 20vw;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -108,7 +108,7 @@ h3 {
 h4 {
     font-family: 'Segoe UI', selawksl, sans-serif;
     font-weight: 350;
-    font-size: 3.69vw;
+    font-size: 2em;
     margin-left: 20vw;
     margin-top: 0px;
     margin-bottom: 0px;
