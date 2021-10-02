@@ -28,6 +28,8 @@ body {
     background-color: #fffaee;
     color: #101010;
     transition-duration: 0.4s;
+    display: flex;
+    flex-direction: column;
 }
 
 .button {
@@ -79,6 +81,7 @@ body {
 }
 
 h1 {
+    align-self: center;
     font-family: 'Segoe UI', selawksl, sans-serif;
     font-weight: 200;
     font-size: 4em;
@@ -117,12 +120,13 @@ h4 {
 }
 
 p {
+    align-self: center;
     font-family: cascadia, monospace;
     font-size: 16px;
-    margin-left: 6vw;
+     margin-left: 6vw;
+    margin-right: 2vw; 
     margin-bottom: 2vw;
-    margin-right: 2vw;
-    max-width: 1600px;
+    max-width: 900px;
     font-weight: 350;
     line-height: 24px;
 }
