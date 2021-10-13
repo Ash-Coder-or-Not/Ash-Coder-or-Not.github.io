@@ -28,37 +28,12 @@ body {
     background-color: #fffaee;
     color: #101010;
     transition-duration: 0.4s;
-    display: flex;
-    flex-direction: column;
-}
-
-.button {
-    margin: auto;
-    /* background-color: #ccc; */
-    border-radius: 10px;
-    padding-bottom: 15px;
-    padding-top: 10px;
-    text-align: center;
-    max-width: 169px;
-    transition-duration: 0.15s;
-    color: #101010;
 }
 
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #33312f;
         color: #fffaee;
-    }
-    
-    
-    .button {
-    /* background-color: #666; */
-    color: #fffaee;
-    }
-    
-    .button:hover {
-        background-color: hsl(330, 100%, 85%);
-        box-shadow: 0px 0px 30px 10px rgba(255, 179, 217, 0.7), 0 1px 5px rgba(0, 0, 0, .1);
     }
     
     .month {
@@ -74,14 +49,7 @@ body {
     }
 }
 
-.button:hover {
-    background-color: #ffb3d9;
-    box-shadow: 0px 5px 20px 5px rgba(255, 179, 217, 0.7), 0 1px 5px rgba(0, 0, 0, .1);
-    color: #101010;
-}
-
 h1 {
-    align-self: center;
     font-family: 'Segoe UI', selawksl, sans-serif;
     font-weight: 200;
     font-size: 4em;
@@ -120,13 +88,12 @@ h4 {
 }
 
 p {
-    align-self: center;
     font-family: cascadia, monospace;
     font-size: 16px;
-     margin-left: 6vw;
-    margin-right: 2vw; 
+    margin-left: 15vw;
     margin-bottom: 2vw;
-    max-width: 900px;
+    margin-right: 2vw;
+    max-width: 700px;
     font-weight: 350;
     line-height: 24px;
 }
@@ -140,52 +107,6 @@ blockquote {
     margin-right: 2vw;
 }
 
-.button {
-    font-family: 'Segoe UI', selawksl;
-    font-weight: 350;
-    border: none;
-    padding: 1vw 2vw;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 2vw;
-    margin: 1vw 05vw;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: .5vw;
-    /* background-color: #ccc; */
-    border-radius: 10px;
-    padding-bottom: 15px;
-    padding-top: 10px;
-    text-align: center;
-    max-width: 169px;
-    transition-duration: 0.15s;
-    color: #101010;
-  }
-  
-  .button1 {
-    background-color: white; 
-    color: black; 
-    border: 0.25vw solid #535353;
-    
-  }
-  
-  .button1:hover {
-    background-color: #535353;
-    color: white;
-    box-shadow: 0 1vw 2vw 0 rgba(0,0,0,0.24), 0 17vw 50vw 0 rgba(0,0,0,0.19);
-  }
-  
-  .button2 {
-    background-color: white; 
-    color: black; 
-    border: 2vw solid #008CBA;
-  }
-  
-  .button2:hover {
-    background-color: #008CBA;
-    color: white;
-  }
 
 ul {
   list-style-type: none;
@@ -193,7 +114,6 @@ ul {
   font-weight: 300;
   font-size: large;
   padding: auto;
-  
 }
 
 .no-bullets-month {
@@ -207,8 +127,8 @@ ul {
 }
 
 .no-bullets-standalone {
-  padding-left: 6vw;
-  padding-top: 2vw;
+  padding-left: 20vw;
+  padding-top: 2vw
 }
 
 a:link {
