@@ -2,12 +2,12 @@
     font-family: selawksl;
     src: url(selawksl.woff2);
 }
-
+/*
 @font-face {
     font-family: casc;
     src: url(CascadiaMono.woff2);
 }
-
+*/
 ::-webkit-scrollbar {
     background-color: #202324;
     color: #aba499;
@@ -77,7 +77,7 @@ h4 {
 }
 
 p {
-    font-family:  casc, monospace;
+    font-family: monospace;
     font-size: 16px;
     margin-bottom: 2vw;
     margin-left: auto;
@@ -87,18 +87,22 @@ p {
 }
 
 blockquote {
-    font-family: casc, monospace;
+    font-family: monospace;
     font-size: large;
     font-weight: 350;
-    margin-left: 8vw;
+    margin-left: 4vw;
     margin-bottom: 2vw;
     margin-right: 2vw;
+    padding: 20px;
+    background-color: #262423;
+    border-left: 2px solid #ccc8be;
+    border-radius: 5px;
 }
 
 
 ul {
   list-style-type: none;
-  font-family: casc, monospace;
+  font-family: monospace;
   font-weight: 350;
   font-size: large;
   padding: auto;
@@ -120,26 +124,26 @@ ul {
 }
 
 a:link {
-  font-family: casc, monospace;
+  font-family: monospace;
   font-size: large;
   text-decoration: none;
 }
 
 a:hover {
-  font-family: casc, monospace;
+  font-family: monospace;
   text-decoration: none;
   color: #535353;
 }
 
 a:visited {
-  font-family: casc, monospace;
+  font-family: monospace;
   font-size: large;
   text-decoration: none;
   color:#9b9a9a;
 }
 
 li.month {
-  font-family: casc, monospace;
+  font-family: monospace;
   font-size: large;
   text-decoration: none;
 }
