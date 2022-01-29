@@ -19,6 +19,10 @@
     background-color: #454a4d;
 }
 
+:root {
+    scrollbar-color: #454A4D #202324;
+}
+
 body {
     margin: auto;
     background-color: #fffaee;
