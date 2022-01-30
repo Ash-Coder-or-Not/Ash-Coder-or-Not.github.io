@@ -27,7 +27,7 @@ body {
     margin: auto;
     background-color: #fffaee;
     color: #101010;
-    transition-duration: 0.4s;
+    transition-duration: 420ms;
     max-width: 60%;
 }
 
@@ -164,4 +164,16 @@ hr {
 img {
     max-width: 100%;
     object-fit: contain;
+}
+
+summary {
+    font-family: 'Segoe UI', selawksl, sans-serif;
+    font-weight: 350;
+    font-size: 1.5em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+details > summary {
+    transition-duration: 420ms;
 }
