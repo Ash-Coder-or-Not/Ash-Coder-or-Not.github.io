@@ -8,6 +8,18 @@
     src: url(CascadiaMono.woff2);
 }
 */
+
+@keyframes details-show {
+    from {
+      opacity:0;
+      transform: var(--details-translate, translateY(-0.5em));
+    }
+  }
+  
+  details[open] > *:not(summary) {
+    animation: details-show 420ms ease-in-out;
+  }
+
 ::-webkit-scrollbar {
     background-color: #202324;
     color: #aba499;
@@ -174,6 +186,7 @@ summary {
     margin-bottom: 0px;
 }
 
-details > summary {
-    transition-duration: 420ms;
+details {
+    animation-name: dropdown;
+    animation-duration: 420ms;
 }
