@@ -62,8 +62,8 @@ body {
     }
     
     blockquote {
-        background-color: #ccc8be;
-        border-left: 2px solid #262423;
+        background-color: #262423;
+        border-left: 2px solid #ccc8be;
     }
 }
 
@@ -115,8 +115,8 @@ blockquote {
     margin-bottom: 2vw;
     margin-right: 2vw;
     padding: 20px;
-    background-color: #262423;
-    border-left: 2px solid #ccc8be;
+    background-color: #ccc8be;
+    border-left: 2px solid #262423;
     border-radius: 5px;
 }
 
