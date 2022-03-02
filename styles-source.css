@@ -43,6 +43,19 @@ body {
     max-width: 60%;
 }
 
+blockquote {
+    font-family: monospace;
+    font-size: large;
+    font-weight: 350;
+    margin-left: 4vw;
+    margin-bottom: 2vw;
+    margin-right: 2vw;
+    padding: 20px;
+    background-color: #ccc8be;
+    border-left: 2px solid #262423;
+    border-radius: 5px;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #33312f;
@@ -106,20 +119,6 @@ p {
     font-weight: 350;
     line-height: 24px;
 }
-
-blockquote {
-    font-family: monospace;
-    font-size: large;
-    font-weight: 350;
-    margin-left: 4vw;
-    margin-bottom: 2vw;
-    margin-right: 2vw;
-    padding: 20px;
-    background-color: #ccc8be;
-    border-left: 2px solid #262423;
-    border-radius: 5px;
-}
-
 
 ul {
   list-style-type: none;
