@@ -43,6 +43,18 @@ body {
     max-width: 60%;
 }
 
+pre {
+    padding: 1.2em;
+    border-radius: 5px;
+}
+
+code, pre {
+    background-color: #ccc8be !important;
+    font-size: 1.1em;
+    overflow: auto;
+    max-width: 690px;
+}
+
 blockquote {
     font-family: monospace;
     font-size: large;
@@ -77,6 +89,10 @@ blockquote {
     blockquote {
         background-color: #262423;
         border-left: 2px solid #ccc8be;
+    }
+    
+    code, pre {
+        background-color: #262423 !important;
     }
 }
 
@@ -121,7 +137,13 @@ p {
 }
 
 ul {
-  list-style-type: none;
+  font-family: monospace;
+  font-weight: 350;
+  font-size: large;
+  padding: auto;
+}
+
+ol {
   font-family: monospace;
   font-weight: 350;
   font-size: large;
@@ -129,15 +151,18 @@ ul {
 }
 
 .no-bullets-month {
+  list-style-type: none;
   padding-top: 6vw;
 }
 
 .no-bullets-entries {
+  list-style-type: none;
   padding-left: 1vw;
   padding-top: 2vw;
 }
 
 .no-bullets-standalone {
+  list-style-type: none;
   padding-left: 0px;
   padding-top: 2vw;
   margin: auto;
@@ -178,7 +203,7 @@ hr {
 }
 
 img {
-    max-width: 100%;
+    max-width: 690px;
     object-fit: contain;
 }
 
