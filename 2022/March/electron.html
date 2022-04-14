@@ -3,6 +3,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/prism.css">
         <title>So I finally have my verdict on Electron.</title>
     </head>
     <body>
@@ -13,7 +14,8 @@
         <p>one word: convenience.</p>
         <hr>
         
-        <p>    okay, i need to give a better answer. 
+        <p>
+            okay, i need to give a better answer. 
         </p>
         
         <p>
@@ -41,16 +43,16 @@
             So one big problem with electron (apart from the whole memory usage situation which i'll address soon) is that it uses javascript, and javascript code looks like this:
         </p>
         
-        <pre><code  class="javascript hljs"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">changeMode</span>(<span class="hljs-params"></span>) </span>{
-                <span class="hljs-keyword">var</span> app = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">"BODY"</span>)[<span class="hljs-number">0</span>];
-                <span class="hljs-keyword">if</span> (localStorage.getItem(<span class="hljs-string">"lightMode"</span>) == <span class="hljs-string">"dark"</span>) {
-                    localStorage.setItem (<span class="hljs-string">"lightMode"</span>, <span class="hljs-string">"light"</span>);
-                    app.setAttribute(<span class="hljs-string">"light-mode"</span>, <span class="hljs-string">"light"</span>);
-                } <span class="hljs-keyword">else</span> {
-                    localStorage.setItem (<span class="hljs-string">"lightMode"</span>, <span class="hljs-string">"dark"</span>);
-                    app.setAttribute(<span class="hljs-string">"light-mode"</span>, <span class="hljs-string">"dark"</span>);
-                }		
-            }</code></pre>
+        <pre><code class="language-js">function changeMode() {
+    var app = document.getElementsByTagName("BODY")[0];
+    if (localStorage.getItem("lightMode") == "dark") {
+        localStorage.setItem ("lightMode", "light");
+        app.setAttribute("light-mode", "light");
+    } else {
+        localStorage.setItem ("lightMode", "dark");
+        app.setAttribute("light-mode", "dark");
+    }		
+}</code></pre>
             
         <p>
             as you can see, it has an abundance of symbols that aren't text, and i have a bit of a trouble trying to read stuff with a lot of symbols that aren't text (looking at you, maths)<br>
@@ -78,8 +80,8 @@
         </h2>
         
         <p>
-            the repo is <a href="https://github.com/hundredrabbits/Left">this</a>, and it looks like this: <br>
-            <img src="Left.jpg"><br><br>
+            the repo is <a href="https://github.com/hundredrabbits/Left">this</a>, and it looks like this: <br><br>
+            <img src="Left.jpg" alt="Left, a distractionless text editor"><br><br>
             It's beautiful, has a unique feature-set, is blazing fast, and is the lightest electron app I've used.
         </p>
         
@@ -113,5 +115,6 @@
 
 
         <p><a href="/index.html"> Go back to home </a></p>
+        <script src="/prism.js"></script>
     </body>
 </html>

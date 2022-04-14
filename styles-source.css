@@ -2,12 +2,12 @@
     font-family: selawksl;
     src: url(selawksl.woff2);
 }
-/*
+
 @font-face {
     font-family: casc;
     src: url(CascadiaMono.woff2);
 }
-*/
+
 
 @keyframes details-show {
     from {
@@ -22,7 +22,8 @@
 
 ::-webkit-scrollbar {
     background-color: #202324;
-    color: #aba499;
+    color: #a
+    ba499;
 }
 ::-webkit-scrollbar-corner {
     background-color: #181a1b;
@@ -38,7 +39,7 @@
 body {
     margin: auto;
     background-color: #fffaee;
-    color: #101010;
+    color: #333;
     transition-duration: 420ms;
     max-width: 60%;
 }
@@ -56,7 +57,7 @@ code, pre {
 }
 
 blockquote {
-    font-family: monospace;
+    font-family: casc, monospace;
     font-size: large;
     font-weight: 350;
     margin-left: 4vw;
@@ -71,7 +72,7 @@ blockquote {
 a:link {
   font-family: inherit;
   font-size: inherit;
-  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
@@ -87,33 +88,7 @@ a:visited {
   color:#9b9a9a;
  }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #33312f;
-        color: #fffaee;
-    }
-    
-    .month {
-        color: #fffaee;
-    }
-    
-    a:link {
-        color: #fffaee;
-    }
-    
-    a:hover {
-        color: #888;
-    }
-    
-    blockquote {
-        background-color: #262423;
-        border-left: 2px solid #ccc8be;
-    }
-    
-    code, pre {
-        background-color: #262423 !important;
-    }
-}
+
 
 h1 {
     font-family: 'Segoe UI', selawksl, sans-serif;
@@ -140,13 +115,14 @@ h4 {
     font-family: 'Segoe UI', selawksl, sans-serif;
     font-weight: 300;
     font-size: 2em;
+    
     margin-top: 0px;
     margin-bottom: 0px;
     padding-top: 10vw;
 }
 
 p {
-    font-family: monospace;
+    font-family: casc, monospace;
     font-size: 16px;
     margin-bottom: 2vw;
     margin-left: auto;
@@ -156,16 +132,16 @@ p {
 }
 
 ul {
-  font-family: monospace;
+  font-family: casc, monospace;
   font-weight: 350;
   font-size: large;
   padding: auto;
 }
 
 ol {
-  font-family: monospace;
+  font-family: casc, monospace;
   font-weight: 350;
-  font-size: large;
+  font-size: 16px;
   padding: auto;
 }
 
@@ -188,7 +164,7 @@ ol {
 }
 
 li.month {
-  font-family: monospace;
+  font-family: casc, monospace;
   font-size: large;
   text-decoration: none;
 }
@@ -218,4 +194,32 @@ summary {
 details {
     animation-name: dropdown;
     animation-duration: 420ms;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #33312f;
+        color: #fffaee;
+    }
+    
+    .month {
+        color: #fffaee;
+    }
+    
+    a:link {
+        color: #fffaee;
+    }
+    
+    a:hover {
+        color: #888;
+    }
+    
+    blockquote {
+        background-color: #262423;
+        border-left: 2px solid #ccc8be;
+    }
+    
+    code, pre {
+        background-color: #262423 !important;
+    }
 }
