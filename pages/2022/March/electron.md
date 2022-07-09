@@ -78,6 +78,4 @@ anyway, I have come to the realisation that if i wanna write something that's ea
 2. simply using electron and not being lazy enough to make another slack. or signal desktop.
 
 <br><br><br>
-anyway that's enough for now lol<br><br>
-
-[Go back to home](/index.html)
+anyway that's enough for now lol

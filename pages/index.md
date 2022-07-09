@@ -12,7 +12,35 @@ template: homepage
       A: just send mail to my personal gmail account <a href="mailto:newestideaz@gmail.com?subject=Hi Ash!">newestideaz@gmail.com</a> (warning: since i'm lazy and forgetful, i may not actually reply till 2-5 business days later; you have been warned.)</p>
   </details>
   
-  ## Blog posts
+## Blog posts
   
-  here's a blog post lol: [electron is nice](2022/March/electron.html)
+<ul class="no-bullets">            
+      <li class="month">March 2022</li>
+      <ul class="no-bullets">
+        <li class="postname"><a href="/2022/March/electron.html">So i finally have my verdict on Electron.</a></li>
+      </ul><br><br>
+      <li class="month">February 2022</li>
+      <ul class="no-bullets">
+        <li class="postname"><a href="/2022/February/fb-dying.html">FaceBook is dying.</a></li>
+      </ul><br><br>
+      <li class="month">January 2022</li>
+      <ul class="no-bullets">
+        <li class="postname"><a href="/2022/January/gemini.html">I tried out gemini! (also important announcement)</a></li>
+      </ul><br><br>
+      <li class="month">December 2021</li>
+      <ul class="no-bullets">
+        <li class="postname"><a href="/2021/December/end-of-2021.html">lol the year's ending already</a></li>
+      </ul><br><br>
+      <li class="month">October 2021</li>
+      <ul class="no-bullets">
+        <li class="postname"><a href="/2021/October/pc-ded.html">My PC Died :(</a></li>
+        <li class="postname"><a href="/2021/October/vscode-web.html">vscode.dev is a lifesaver</a></li>
+      </ul><br><br>
+      <li class="month">September 2021</li>
+      <ul class="no-bullets">
+        <li class="postname"><a href="/2021/September/motherfuckingwebsite.html">Motherfucking Website</a></li>
+        <li class="postname"><a href="/2021/September/cinderella.html"> Movie Review: Cinderella </a></li>
+      </ul><br><br>
+  </ul>
+  
 
