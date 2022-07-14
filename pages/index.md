@@ -12,7 +12,7 @@ template: homepage
       A: just send mail to my personal gmail account <a href="mailto:newestideaz@gmail.com?subject=Hi Ash!">newestideaz@gmail.com</a> (warning: since i'm lazy and forgetful, i may not actually reply till 2-5 business days later; you have been warned.)</p>
   </details>
   
-## Blog posts
+## list of all my blog posts: (for more posts, visit my [gemini capsule](gemini://not-a-web-developer.srht.site/))
   
 <ul class="no-bullets">            
       <li class="month">March 2022</li>
