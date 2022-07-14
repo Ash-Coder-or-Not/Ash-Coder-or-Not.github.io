@@ -71,7 +71,7 @@ I don't know how Left manages that, but the codebase is pretty small and is writ
 
 ## I hope now you realise why I suddenly decided electron ain't all that bad.
 
-I realised that most of the problems of electron is that people are being too lazy with trying to optimise their application to run better on weaker hardware because fuck that, who cares about the guy who can't even buy a 600$ computer right?
+I realised that most of the problems of electron is that people are being too lazy with trying to optimise their application to run better on weaker hardware because fuck that, who cares about the guy who can't even buy a 600$ computer right? <br>
 anyway, I have come to the realisation that if i wanna write something that's easy to port to both windows and linux while looking almost the exact same, i have two options:
 
 1. using SDL and writing a native program from scratch (like lite-xl); or
