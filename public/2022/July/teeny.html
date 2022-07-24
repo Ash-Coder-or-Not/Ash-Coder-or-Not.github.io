@@ -1,0 +1,47 @@
+<html><head> 
+  <link rel="stylesheet" href="/normalize.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/prism.css">
+<title>As you can see, this blog hasn't had a post since forever.</title></head>
+
+<body>
+    <br><div id="page-content"><h1 id="as-you-can-see-this-blog-hasnt-had-a-post-since-forever">As you can see, this blog hasn't had a post since forever.</h1>
+<p>And I'm gonna explain why.</p>
+<p>First of all, I'm only covering the technical aspect here; the personal reasons for the absence of written content have <a href="//not-a-web-developer.srht.site/2022/June/writing.gmi">their own post</a> on my gemini capsule.</p>
+<hr>
+<p>Ever since the beginning of this blog, I've written all the html and CSS by hand. This has had its advantages:</p>
+<ul>
+<li>i don't have to depend on a complicated build system, so i spend more time writing than fiddling with the ins and outs of said build system</li>
+<li>it's a bloody website for fuck's sake, why would I want to install half a million dependencies and write a ton of configuration files, templates and scripts just to output text on a screen? It feels wrong.</li>
+<li>forget about feelings, who cares if it works, right? But it doesn't work; at least for me, every SSG i tried i couldn't wrap my head around how it worked and how to use it.</li>
+</ul>
+<h2 id="okay-i-guess-its-time-for-a-list-of-all-the-ssgs-i-tried">okay, i guess it's time for a list of all the SSGs i tried:</h2>
+<ol>
+<li><a href="http://jekyllrb.com/">Jekyll</a>;</li>
+<li><a href="https://www.11ty.dev/">11ty</a>;</li>
+<li><a href="https://gohugo.io/">Hugo</a>;</li>
+<li><a href="https://franklinjl.org/">Franklin.jl</a> (yes, i tried Julia too, that will get its own <del>rant</del> blogpost later); and last but not least</li>
+<li><a href="https://www.gatsbyjs.com/">Gatsby</a></li>
+</ol>
+<p>The problem with these wasn't the fact that they don't work at all; I mean, people use these tools daily and make some <a href="https://github.com/jeffreytse/jekyll-theme-yat/">really</a> <a href="https://github.com/yinkakun/eleventy-duo">beautiful</a> <a href="https://themes.gohugo.io/themes/hermit/">themes</a> for them.</p>
+<h3 id="i-dont-want-to-use-their-themes-i-want-the-website-to-stay-the-same-visually">I don't want to use their themes. I want the website to stay the same, visually.</h3>
+<p>That means I need to be able to figure out how to port over my website to one of these SSGs, since I'm not spending the time to rebuild my website from scratch just to have it fit one of them. That might sound lazy, and it is; however, you'll soon understand why.</p>
+<h2 id="so-how-did-they-fare">So, how did they fare?</h2>
+<p>in short? not well.</p>
+<p>longer explanation? Well, here's a breakdown:</p>
+<ol>
+<li><p>Jekyll: Since Github Pages, on which the website is currently hosted, is built in Jekyll, it should be the best option; however, I wasn't able to understand how to import a custom css file for Jekyll. As far as I can see, the only way to get custom styling in jekyll is to make my own theme, host it on Github, and reference it in the <code>_config.yml</code> like this:</p>
+<pre><code class="language-yaml">remote_theme: "not-a-web-developer/my-jekyll-theme"
+</code></pre>
+<p>making an entire jekyll theme by myself is too much for me to be able to do, so that's one option down.</p>
+</li>
+<li><p>11ty: same problem as Jekyll,</p>
+</li>
+</ol>
+</div>
+    <br><br><p><a href="/index.html"> Go back to home </a></p>
+    <script src="/prism.js"></script>
+
+
+
+</body></html>
