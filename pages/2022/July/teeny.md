@@ -37,4 +37,11 @@ remote_theme: "not-a-web-developer/my-jekyll-theme"
 ```
 making an entire jekyll theme by myself is too much for me to be able to do, so that's one option down.
 
-2. 11ty: same problem as Jekyll, 
+2. 11ty: same problem as Jekyll, the website was really complicated for me to navigate through, and i couldn't figure out how to get CSS working, or even what to write in; long story short, it was choice paralysis and the explanations for all the options went over my head, which didn't help.
+
+3. Hugo: Hugo also apparently requires you to choose a theme, and making a theme requires knowing Go; which unfortunately makes it a no-go for me, since i'm not quite interested (nor have the mental capacity) in learning Go at the moment. <br>
+\<tangent\><br>
+I understand that I can abuse the static files directory ([this](https://gohugo.io/content-management/static-files/)) to store my css, but this is just a workaround and i do not expect it to work at all.<br>
+\</tangent\>
+
+4. 
