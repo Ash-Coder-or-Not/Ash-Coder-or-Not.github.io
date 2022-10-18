@@ -101,6 +101,12 @@ blockquote,pre {
     border-radius: 4px
 }
 
+code {
+    background: #ccc8be;
+    padding: 0.2rem 0.3rem;
+    border-radius: 4px
+}
+
 blockquote {
     border-left: 2px solid #333
 }
@@ -148,6 +154,10 @@ a:visited {
     blockquote,img,pre {
         background: #262423;
         box-shadow: var(--box-shadow-dark)
+    }
+
+    code {
+        background: #262423;
     }
 
     blockquote {

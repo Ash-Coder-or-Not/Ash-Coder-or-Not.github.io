@@ -1,0 +1,66 @@
+<html><head> 
+  <link rel="stylesheet" href="/normalize.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/prism.css">
+<title>As you can see, this blog hasn't had a post since forever.</title></head>
+
+<body>
+    <br><div id="page-content"><h1 id="as-you-can-see-this-blog-hasnt-had-a-post-since-forever">As you can see, this blog hasn't had a post since forever.</h1>
+<p>And I'm gonna explain why.</p>
+<p>First of all, I'm only covering the technical aspect here; the personal reasons for the absence of written content have <a href="gemini://not-a-web-developer.srht.site/2022/June/writing.gmi">their own post</a> on my gemini capsule.</p>
+<hr>
+<p>Ever since the beginning of this blog, I've written all the html and CSS by hand. This has had its advantages:</p>
+<ul>
+<li>I don't have to depend on a complicated build system, so I spend more time writing than fiddling with the ins and outs of said build system</li>
+<li>it's a bloody website for fuck's sake, why would I want to install half a million dependencies and write a ton of configuration files, templates and scripts just to output text on a screen? It feels wrong.</li>
+<li>forget about feelings, who cares if it works, right? But it doesn't work; at least for me, every SSG i tried i couldn't wrap my head around how it worked and how to use it.</li>
+</ul>
+<h2 id="okay-i-guess-its-time-for-a-list-of-all-the-ssgs-i-tried">okay, I guess it's time for a list of all the SSGs I tried:</h2>
+<ol>
+<li><a href="http://jekyllrb.com/">Jekyll</a>;</li>
+<li><a href="https://www.11ty.dev/">11ty</a>;</li>
+<li><a href="https://gohugo.io/">Hugo</a>;</li>
+<li><a href="https://franklinjl.org/">Franklin.jl</a> (yes, i tried Julia too, that will get its own <del>rant</del> blogpost later); and last but not least</li>
+<li><a href="https://www.gatsbyjs.com/">Gatsby</a></li>
+</ol>
+<p>The problem with these wasn't the fact that they don't work at all; I mean, people use these tools daily and make some <a href="https://github.com/jeffreytse/jekyll-theme-yat/">really</a> <a href="https://github.com/yinkakun/eleventy-duo">beautiful</a> <a href="https://themes.gohugo.io/themes/hermit/">themes</a> for them.</p>
+<h3 id="i-dont-want-to-use-their-themes-i-want-the-website-to-stay-the-same-visually">I don't want to use their themes. I want the website to stay the same, visually.</h3>
+<p>That means I need to be able to figure out how to port over my website to one of these SSGs, since I'm not spending the time to rebuild my website from scratch just to have it fit one of them. That might sound lazy, and it is; however, you'll soon understand why.</p>
+<h2 id="so-how-did-they-fare">So, how did they fare?</h2>
+<p>in short? not well.</p>
+<p>longer explanation? Well, here's a breakdown:</p>
+<ol>
+<li><p>Jekyll: Since Github Pages, on which the website is currently hosted, is built in Jekyll, it should be the best option; however, I wasn't able to understand how to import a custom css file for Jekyll. As far as I can see, the only way to get custom styling in jekyll is to make my own theme, host it on Github, and reference it in the <code>_config.yml</code> like this:</p>
+<pre><code class="language-yaml">remote_theme: "not-a-web-developer/my-jekyll-theme"
+</code></pre>
+<p>making an entire jekyll theme by myself is too much for me to be able to do, so that's one option down.</p>
+</li>
+<li><p>11ty: same problem as Jekyll, the website was really complicated for me to navigate through, and I couldn't figure out how to get CSS working, or even what to write in; long story short, it was choice paralysis and the explanations for all the options went over my head, which didn't help.</p>
+</li>
+<li><p>Hugo: Hugo also apparently requires you to choose a theme, and making a theme requires knowing Go; which unfortunately makes it a no-go for me, since i'm not quite interested (nor have the mental capacity) in learning Go at the moment. <br>
+&lt;tangent&gt;<br>
+I understand that I can abuse the static files directory (<a href="https://gohugo.io/content-management/static-files/">this</a>) to store my css, but this is just a workaround and i do not expect it to work at all.<br>
+&lt;/tangent&gt;</p>
+</li>
+<li><p>Franklin.jl: Franklin is fairly simple, but i have a few issues with Julia as a language that came in the way.</p>
+</li>
+<li><p>Gatsby: oh god. Gatsby is so complicated, I can't even in good faith call it an SSG anymore.</p>
+</li>
+</ol>
+<h2 id="enter-teeny">Enter teeny.</h2>
+<p>I found this simple wrapper around <a href="https://github.com/markedjs/marked">marked.js</a> while randomly browsing Github: <a href="https://github.com/yakkomajuri/teeny"><code>teeny-cli</code></a></p>
+<p>The way it works is by taking in markdown files as content, runs it through marked.js, and does some extra magic to make sure links to static files work properly.</p>
+<p>if that sounds simple, it is. However, that's exactly what i need for this website to be a lot easier to write for, while having easy control on the css and any optional javascript I add. (speaking of which, if you block javascript, that's perfectly fine; I only use it for syntax highlighting at the moment)</p>
+<h2 id="so-in-conclusion">So in conclusion:</h2>
+<p>The website is now easier for me to work on without being any heavier to run on either the client or on my laptop (oh yeah i got a laptop, review coming soon™).</p>
+<hr>
+<p>PS: I started writing this post in July, but life happened and now it's October ༎ຶ⁠‿⁠༎ຶ</p>
+<p>After university starts (yes, that also requires its own post) I'll hopefully have more time for writing blog posts.</p>
+<p>until then, adios.</p>
+</div>
+    <br><br><p><a href="/index.html"> Go back to home </a></p>
+    <script src="/prism.js"></script>
+
+
+
+</body></html>
