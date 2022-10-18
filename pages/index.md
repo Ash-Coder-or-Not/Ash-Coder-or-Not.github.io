@@ -15,9 +15,9 @@ template: homepage
 ## list of all my blog posts: (for more posts, visit my [gemini capsule](gemini://not-a-web-developer.srht.site/))
   
 <ul class="no-bullets">
-  <li class="month">July 2022</li>
+  <li class="month">October 2022</li>
   <ul class="no-bullets">
-    <li class="postname"><a href="/2022/July/teeny.html">The website just got an upgrade</a></li>
+    <li class="postname"><a href="/2022/October/teeny.html">The website just got an upgrade</a></li>
   </ul><br><br>
   <li class="month">March 2022</li>
   <ul class="no-bullets">
