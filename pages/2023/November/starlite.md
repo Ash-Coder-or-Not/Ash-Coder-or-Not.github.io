@@ -301,4 +301,8 @@ as it turns out, this drastically changed the way my laptop works.
 
 I set minimum and maximum frequencies to 800 and 1100 MHz respectively for battery governor, and 1100 and 3100 MHz for performance governor.
 
-Notice how I mentioned governors, rather than modes. That was intentional: it seems that unlike `tlp` which changes modes based on power source (whether you're plugged in or running off battery), `auto-cpufreq`
+Notice how I mentioned governors, rather than modes. That was intentional: it seems that unlike `tlp` which changes modes based on power source (whether you're plugged in or running off battery), `auto-cpufreq` seems to change between governors primarily based on how much load the CPU is being hit with and for how long, while power source takes less precedence.
+
+What this means in general usage is that even when on battery, loading websites and opening applications is quicker than with `tlp`, while battery life and operating temperatures are finally acceptable.
+
+For example, when I'm sitting outdoors writing this in sunlight, I ensure nothing unneeded is running in the background (I even disable networking and bluetooth), and simply typing this in Left, with `teeny`'s dev server running, along with firefox having the rendered page open, and btop running in the background, my battery life is finally reaching (and sometimes crossing by a significant amount) the 8 hour mark advertised with this laptop, this time with manageable temps (because the CPU was usually running slower clocks than a pentium 3, depending on the version of the chip you're tlaking) and without burning my thighs. yay! 

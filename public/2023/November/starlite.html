@@ -175,6 +175,25 @@ One small issue, this laptop is weaker than older devices.
 <p>and hey, my laptop finally idles! (as long as we agree that idling means the CPU is under 5% when not doing anything)</p>
 <h3 id="idling-fixed-next-stop-boot-time">idling fixed, next stop: boot time.</h3>
 <p>Despite having an SSD, the laptop took over 30 seconds to boot linux, which isn't what one would expect from a "lightweight" operating system.</p>
+<p>I decided one way to fix this would be to switch out AMI for coreboot. </p>
+<p>Now I know that's putting the cart before the horse (i should change out my OS to something lighter than ubuntu), but thanks to starlabs providing firmware over LVFS, changing to coreboot is easier than changing out my distro.</p>
+<p>and, easy it was! at least on paper. All I had to do was make sure my current firmware was up-to-date, and then use <code>fwupdmgr</code> to change my branch of firmware to <code>coreboot</code>.</p>
+<p>However, for some reason, I kept getting random errors that would change every time whenever i would try running <code>switch-branch</code>. 
+Then it worked out of the blue, so no idea what the heck was wrong with that.</p>
+<p>Either way, my boot time reduced significantly to just over 20 seconds, and interestingly my laptop started to overheat a lot more often.</p>
+<p>This brings me to the next optimisation:</p>
+<h3 id="battery-life-and-performance">battery life, and performance.</h3>
+<p>This section has me optimising for two contradictory things, so let me explain what my intent is: I wish to have a laptop that has an extremely wide range of possible performance profiles, so that I can optimise for either performance <em>or</em> battery life, with battery life being the default.</p>
+<p>Now I hear you saying, "TLP was doing that job for you, why did you remove it?"</p>
+<p>My answer to that is that it wasn't doing as good of a job as i needed; my laptop wasn't downclocking as much as I'd like during periods of light use, and it wouldn't turbo as high during short bursts of intensive use (like loading a webpage or launching an application). More importantly, it was downclocking or turboing as quickly as I'd like, so there would be a noticeable delay in an increase of performance whenever I would try to do something like launch firefox or open a heavy, tracker-filled website like github.</p>
+<h4 id="speaking-of-github-i-randomly-found-a-project-on-there-called-auto-cpufreq">Speaking of GitHub, I randomly found a project on there called <code>auto-cpufreq</code>.</h4>
+<p>This intended to do essentially the same job as <code>tlp</code>, but it had a config file that seemed powerful, so I decided to get it running.</p>
+<p>as it turns out, this drastically changed the way my laptop works.</p>
+<p><code>auto-cpufreq</code> replaces the <code>intel_pstate</code> driver with its own <code>acpi_cpufreq</code> driver, and gives you manual control over a lot of things <code>tlp</code> doesn't; the one i was most interested in was the manual frequency control, which let me define minimum and maximum frequencies for the CPU to be use by both battery and performance governors. </p>
+<p>I set minimum and maximum frequencies to 800 and 1100 MHz respectively for battery governor, and 1100 and 3100 MHz for performance governor.</p>
+<p>Notice how I mentioned governors, rather than modes. That was intentional: it seems that unlike <code>tlp</code> which changes modes based on power source (whether you're plugged in or running off battery), <code>auto-cpufreq</code> seems to change between governors primarily based on how much load the CPU is being hit with and for how long, while power source takes less precedence.</p>
+<p>What this means in general usage is that even when on battery, loading websites and opening applications is quicker than with <code>tlp</code>, while battery life and operating temperatures are finally acceptable.</p>
+<p>For example, when I'm sitting outdoors writing this in sunlight, I ensure nothing unneeded is running in the background (I even disable networking and bluetooth), and simply typing this in Left, with <code>teeny</code>'s dev server running, along with firefox having the rendered page open, and btop running in the background, my battery life is finally reaching (and sometimes crossing by a significant amount) the 8 hour mark advertised with this laptop, this time with manageable temps (because the CPU was usually running slower clocks than a pentium 3, depending on the version of the chip you're tlaking) and without burning my thighs. yay! </p>
 </div>
     <br><br><p><a href="/index.html"> Go back to home </a></p>
     <script src="/prism.js"></script>
