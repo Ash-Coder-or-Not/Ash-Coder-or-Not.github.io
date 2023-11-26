@@ -293,8 +293,12 @@ My answer to that is that it wasn't doing as good of a job as i needed; my lapto
 
 #### Speaking of GitHub, I randomly found a project on there called `auto-cpufreq`.
 
-This intended to do essentially the same job as TLP, but it had a config file that seemed powerful, so I decided to get it running.
+This intended to do essentially the same job as `tlp`, but it had a config file that seemed powerful, so I decided to get it running.
 
 as it turns out, this drastically changed the way my laptop works.
 
-`auto-cpufreq` replaces the `intel_pstate` driver with its own `acpi_cpufreq` driver, and gives you manual control over 
+`auto-cpufreq` replaces the `intel_pstate` driver with its own `acpi_cpufreq` driver, and gives you manual control over a lot of things `tlp` doesn't; the one i was most interested in was the manual frequency control, which let me define minimum and maximum frequencies for the CPU to be use by both battery and performance governors. 
+
+I set minimum and maximum frequencies to 800 and 1100 MHz respectively for battery governor, and 1100 and 3100 MHz for performance governor.
+
+Notice how I mentioned governors, rather than modes. That was intentional: it seems that unlike `tlp` which changes modes based on power source (whether you're plugged in or running off battery), `auto-cpufreq`
