@@ -3,7 +3,7 @@ template: homepage
 ---
 
 <details class="about-me" open=""><summary> About Me </summary>
-    <p> Q: Who are you? <br>A: I'm a person. A person who's passionate about most things, but good at very few. One of which happens to be working with html. </p>
+    <p> Q: Who are you? <br>A: I'm a person. A person who's passionate about most things, but good at very few. One of which happens to be working with computers. </p>
     <p>Q: what are you doing here? <br>
       A: I like to write about the stuff I know. So, there'll be anywhere from zero to a bfhgillion blog entries covering useless rants about stuff that I'll probably take down in a couple of days after reading it again and realising how wrong I was when I wrote them, and lots of other unstructured content I can't think about yet.</p>
       <p>Q: what am i doing here? <br> 
@@ -15,6 +15,10 @@ template: homepage
 ## list of all my blog posts: (for more posts, visit my [gemini capsule](gemini://not-a-web-developer.srht.site/))
   
 <ul class="no-bullets">
+  <li class="month">December 2023</li>
+  <ul class="no-bullets">
+    <li class="postname"><a href="/2023/December/shot-at-hope.html">Things have changed, I need to talk about them.</a></li>
+  </ul><br><br>
   <li class="month">October 2022</li>
   <ul class="no-bullets">
     <li class="postname"><a href="/2022/October/teeny.html">The website just got an upgrade</a></li>
