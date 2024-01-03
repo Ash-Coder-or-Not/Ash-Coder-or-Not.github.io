@@ -138,7 +138,7 @@ How tiny? it has an 11.6" screen (bigger than a footlong but smaller than astolf
 
 ### Display. [↩︎](#index)
 
-Speaking of, the display is surprisingly good for what I paid: it's 1080p, has a matte surface, gets decently bright outdoors as long as you don't have direct sunlight falling on the screen (i'm currently writing this outdoors during a winter afternoon, and at half brightness this is perfectly useable; full brightness is certainly nice but I wouldn't do that to save on battery life), is decently color accurate, and has fairly good pixel response for a 60Hz panel (and I wouldn't want any more to save on battery life).
+Speaking of, the display is surprisingly good for what I paid: it's 1080p, has a matte surface, gets decently bright outdoors as long as you don't have direct sunlight falling on the screen (i'm currently writing this outdoors during a winter afternoon, and at half brightness this is perfectly useable; full brightness is certainly nice but I wouldn't do that to save on battery life), is decently color accurate, and has acceptable pixel response times for a 60Hz panel (it actually feels inadequate sometimes, but i assume this is to save on battery life, so I let it slide).
 
 ### Keyboard. [↩︎](#index)
 
@@ -174,9 +174,9 @@ This being a thin, tiny and cheap modern-day laptop, it doesn't have a lot of po
 
 on the right (listing ports back to front), there's barrel plug for power, 3.5mm jack (which looks very similar to the barrel jack right beside it, so it's a nightmare to plug the charger in the dark), USB 3 type-A port, and a microSD slot.
 
-On the left, there's a USB 3 type-C port with power delivery, which I use with a dongle to connect switch my desk setup between Caldo and Minuto while using a single port; beside it, theres micro-HDMI (which is a really sad inclusion; seriously guys, mini-displayport or even just type-C with displayport out would've been better) which is very difficult to use, and for some reason also sparks when i'm trying to plug a micro-HDMI cable in? I don't think that's intended behaviour but I'm too tired to deal with micro-HDMI any more than I _have_ to for using this laptop "docked" to my desk (poor man's laptop dock is a flat surface with many cables, which in my case is the perforated top of Caldo, helps with cooling); beyond that is another USB 3 type-A port.
+On the left, there's a USB 3 type-C port with power delivery and displayport alt-mode, which I use with a dongle to switch my desk setup between Caldo and Minuto while using a single port; beside it, theres micro-HDMI (which is a really sad inclusion; seriously guys, mini-displayport or even just type-C with displayport out would've been better) which is very difficult to use, and for some reason also sparks when i'm trying to plug a micro-HDMI cable in? I don't think that's intended behaviour but I'm too tired to deal with micro-HDMI any more than I _have_ to; beyond that is another USB 3 type-A port.
 
-That's about it for physical connectivity. The laptop does support ac Wi-Fi, which is a nice inclusion especially because that's the only way it has to connect to a network.
+That's about it for physical connectivity. The laptop does support ac Wi-Fi, which is a nice inclusion especially because without an ethernet jack, that's the only way it has to connect to a network.
 
 It also does bluetooth, which I use for bluetooth audio (because that's the only place I use bluetooth in my everyday life).
 
@@ -219,7 +219,7 @@ However, this is never gonna be all sunshine and rainbows, otherwise every lapto
 So time to tackle the compromise you're making going fanless.
 
 **Disadvantages:**
-- The purpose of a fan is to cool the heat-generating elements of a laptop. If you don't have a fan, the only way left to cool (currently) is passive cooling; also called heating up the body of the laptop until it radiates all its heat away. The fact that this laptop has an aluminium body is a double-edged sword: It takes heat away from the CPU and spreads it across the body of the laptop, improving cooling, but then the laptop has a tendency of burning your skin, which is less than ideal. I do have this problem under control now, but that will come in a different section.
+- The purpose of a fan is to cool the heat-generating elements of a laptop. If you don't have a fan, the only way left to cool (currently) is passive cooling, which is a technical way of saying "heating up the body of the laptop until it radiates all its heat away". The fact that this laptop has an aluminium body is a double-edged sword: It takes heat away from the CPU and spreads it across the body of the laptop, improving cooling, but then the laptop has a tendency of burning your skin, which is less than ideal. I do have this problem under control now, but that will come in a different section.
 - Because of a fanless design, you're not only thermally limited, but you're also power-limnited; what that means is that performance is going to be, frankly, pretty terrible for a lot of things. Thankfully, that isn't a problem for me because i'm not using this for anything compute-heavy when i'm away from the wall; again, more details will be in a different section.
 
 <br>
@@ -277,7 +277,7 @@ Now I know that's putting the cart before the horse (i should change out my OS t
 and, easy it was! at least on paper. All I had to do was make sure my current firmware was up-to-date, and then use `fwupdmgr` to change my branch of firmware to `coreboot`.
 
 However, for some reason, I kept getting random errors that would change every time whenever i would try running `switch-branch`. 
-Then it worked out of the blue, so no idea what the heck was wrong with that.
+Then it worked out of the blue without changing anything, so no idea what the heck was wrong with that.
 
 Either way, my boot time reduced significantly to just over 20 seconds, and interestingly my laptop started to overheat a lot more often.
 
@@ -289,20 +289,21 @@ This section has me optimising for two contradictory things, so let me explain w
 
 Now I hear you saying, "TLP was doing that job for you, why did you remove it?"
 
-My answer to that is that it wasn't doing as good of a job as i needed; my laptop wasn't downclocking as much as I'd like during periods of light use, and it wouldn't turbo as high during short bursts of intensive use (like loading a webpage or launching an application). More importantly, it was downclocking or turboing as quickly as I'd like, so there would be a noticeable delay in an increase of performance whenever I would try to do something like launch firefox or open a heavy, tracker-filled website like github.
+My answer to that is that it wasn't doing as good of a job as i needed; my laptop wasn't downclocking as much as I'd like during periods of light use, and it wouldn't turbo as high during short bursts of intensive use (like loading a webpage or launching an application). I know the config file for TLP lets you change its behaviour entirely, but it felt too complicated for me to dig into.
 
 #### Speaking of GitHub, I randomly found a project on there called `auto-cpufreq`.
 
-This intended to do essentially the same job as `tlp`, but it had a config file that seemed powerful, so I decided to get it running.
+This intended to do essentially the same job as `tlp`, but it had a config file that seemed easier to use, so I decided to get it running.
 
 as it turns out, this drastically changed the way my laptop works.
 
-`auto-cpufreq` replaces the `intel_pstate` driver with its own `acpi_cpufreq` driver, and gives you manual control over a lot of things `tlp` doesn't; the one i was most interested in was the manual frequency control, which let me define minimum and maximum frequencies for the CPU to be use by both battery and performance governors. 
+`auto-cpufreq` gives you access to a lot of settings in an easy to understand config file; the one i was most interested in was the manual frequency control, which let me define minimum and maximum frequencies for the CPU to be use by both battery and performance governors. 
 
-I set minimum and maximum frequencies to 800 and 1100 MHz respectively for battery governor, and 1100 and 3100 MHz for performance governor.
+I set minimum and maximum frequencies to 800 and 1100 MHz respectively for powersave governor, and 1100 and 3100 MHz for performance governor.
 
 Notice how I mentioned governors, rather than modes. That was intentional: it seems that unlike `tlp` which changes modes based on power source (whether you're plugged in or running off battery), `auto-cpufreq` seems to change between governors primarily based on how much load the CPU is being hit with and for how long, while power source takes less precedence.
 
 What this means in general usage is that even when on battery, loading websites and opening applications is quicker than with `tlp`, while battery life and operating temperatures are finally acceptable.
 
-For example, when I'm sitting outdoors writing this in sunlight, I ensure nothing unneeded is running in the background (I even disable networking and bluetooth), and simply typing this in Left, with `teeny`'s dev server running, along with firefox having the rendered page open, and btop running in the background, my battery life is finally reaching (and sometimes crossing by a significant amount) the 8 hour mark advertised with this laptop, this time with manageable temps (because the CPU was usually running slower clocks than a pentium 3, depending on the version of the chip you're tlaking) and without burning my thighs. yay! 
+For example, when I'm sitting outdoors writing this in sunlight, I ensure nothing unneeded is running in the background (I even disable networking and bluetooth), and simply typing this in Left, with <code>[teeny](https://github.com/yakkomajuri/teeny)</code>'s dev server running, along with firefox having the rendered page open, and btop running in the background, my battery life is finally reaching (and sometimes crossing by a significant amount) the 8 hour mark advertised with this laptop, this time with manageable temps (because the CPU was usually running slower clocks than a pentium 3, depending on the version of the chip you're talking) and without burning my thighs. yay! 
+
