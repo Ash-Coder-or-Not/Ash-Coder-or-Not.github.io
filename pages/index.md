@@ -17,7 +17,7 @@ template: homepage
 <ul class="no-bullets">
   <li class="month">January 2024</li>
   <ul class="no-bullets">
-    <li class="postname"><a href="/2024/January/sourcehut-outage.html">Sourcehut is down,and I have an announcement</a></li>
+    <li class="postname"><a href="/2024/January/sourcehut-outage.html">Sourcehut is down, and I have an announcement</a></li>
   </ul><br><br>
   <li class="month">December 2023</li>
   <ul class="no-bullets">
