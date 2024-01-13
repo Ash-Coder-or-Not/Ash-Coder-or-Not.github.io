@@ -4,7 +4,7 @@ Well, it's not like I have anything better left to do.
 
 ## Life has been very topsy-turvy.
 
-You know how I mentioned [here](/2022/October/teeny.md) that I would go to university and I would hopefully start writing more often?
+You know how I mentioned [here](/2022/October/teeny.html) that I would go to university and I would hopefully start writing more often?
 
 Yeah, that was the last post here for a reason.
 
